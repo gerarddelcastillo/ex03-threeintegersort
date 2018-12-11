@@ -4,7 +4,14 @@
 
 #ifndef EX03_THREEINTEGERSORT_THREEINTEGERSORT_H
 #define EX03_THREEINTEGERSORT_THREEINTEGERSORT_H
-namespace edu{namespace vcccd{ namespace vc{namespace csv13{
-                void sort(int &a, int &b,int &c);
-            }}}}
+#include <stdio.h>
+namespace edu{
+    namespace vcccd {
+        namespace vc {
+            namespace csv13 {
+                void sort(int numArr[]);
+            }
+        }
+    }
+}
 #endif //EX03_THREEINTEGERSORT_THREEINTEGERSORT_H

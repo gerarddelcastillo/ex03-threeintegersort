@@ -2,9 +2,10 @@
 // Created by Gerard Del Castillo on 11/28/2018.
 //
 
-#include <algorithm>
+#include<stdio.h>
+#include<conio.h>
 #include <iostream>
-#include <threeintegersort.h>
+
 
 namespace edu
 {
@@ -14,24 +15,22 @@ namespace edu
         {
             namespace csv13
             {
-                void sort(int &a, int &b, int &c)
+                void sort(int numArr[])
                 {
-                    if (c < b)
+                    int i, j, minNum, temp;
+                    for (i = 0; i < 3 - 1; i++)
                     {
-                        std::swap(c, b);
+                        minNum = i;
+                        for (j = i + 1; j < 3; j++)
+                            if (numArr[j] < numArr[minNum])
+                                minNum = j;
+                        if (minNum != i)
+                        {
+                            temp = numArr[i];
+                            numArr[i] = numArr[minNum];
+                            numArr[minNum] = temp;
+                        }
                     }
-                    if (b < a)
-                    {
-                        std::swap(b, a);
-                    }
-                    if (b > c)
-                    {
-                        std::swap(b, c);
-                    }
-                    else
-                        std::cout << "The following values are sorted from least to greatest:" << a << " " << b
-                                  << " " << c << std::endl;
-
                 }
             }
         }
