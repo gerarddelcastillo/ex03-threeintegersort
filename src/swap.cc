@@ -20,7 +20,7 @@ namespace edu {
                     if (b > c) {
                         std::swap(b, c);
                     } else
-                        std::cout << "These are the values properly sorted, from least to greatest:" << a << " " << b
+                        std::cout << "The following values are from least to greatest:" << a << " " << b
                                   << " " << c << std::endl;
 
                 }
