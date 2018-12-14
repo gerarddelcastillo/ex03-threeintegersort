@@ -2,35 +2,27 @@
 // Created by Gerard Del Castillo on 11/28/2018.
 //
 
-#include<stdio.h>
-#include<conio.h>
+#include <algorithm>
 #include <iostream>
+#include <threeintegersort.h>
 
-
-namespace edu
-{
-    namespace vcccd
-    {
-        namespace vc
-        {
-            namespace csv13
-            {
-                void sort(int numArr[])
-                {
-                    int i, j, minNum, temp;
-                    for (i = 0; i < 3 - 1; i++)
-                    {
-                        minNum = i;
-                        for (j = i + 1; j < 3; j++)
-                            if (numArr[j] < numArr[minNum])
-                                minNum = j;
-                        if (minNum != i)
-                        {
-                            temp = numArr[i];
-                            numArr[i] = numArr[minNum];
-                            numArr[minNum] = temp;
-                        }
+namespace edu {
+    namespace vcccd {
+        namespace vc {
+            namespace csv13 {
+                void sort(int &a, int &b, int &c) {
+                    if (c < b) {
+                        std::swap(c, b);
                     }
+                    if (b < a) {
+                        std::swap(b, a);
+                    }
+                    if (b > c) {
+                        std::swap(b, c);
+                    } else
+                        std::cout << "These are the values properly sorted, from least to greatest:" << a << " " << b
+                                  << " " << c << std::endl;
+
                 }
             }
         }
